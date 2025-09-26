@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+:root {
+    --bg: #fff;
+    --bg-1: #fafafa;
+    --img-bg: #1a1a1a;
+    --fg: #000;
+    --accent-fg: #83aeff;
+    --accent-bg: #31528f;
+    --font: 'Inter', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--fg);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    outline: 0 !important;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.section-py {
+    padding: 100px 0;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 110;
+    height: 120px;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar__links {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+    color: var(--bg);
+}
+
+.navbar__link {
+    position: relative;
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-fg);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 400ms ease, background-color 400ms ease;
+}
+
+.navbar__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar__contact {
+    border-radius: 100vw;
+    padding: 12px 20px;
+    color: var(--bg);
+    border: 2px solid var(--accent-fg);
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    border-bottom-left-radius: 100vw 16vw;
+    border-bottom-right-radius: 100vw 16vw;
+    overflow: hidden;
+    background-image: url(./assets/header-bg.png);
+    background-size: cover;
+}
+
+.header::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--img-bg);
+    opacity: .7;
+    z-index: 1;
+}
+
+.header * {
+    position: relative;
+    z-index: 2;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--bg);
+}
+
+.header__title {
+    font-size: 60px;
+    font-weight: 400;
+    max-width: 60%;
+    text-align: center;
+}
+
+.header__text {
+    max-width: 48%;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.header__button {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 20px;
+    font-size: 20px;
+    border: 4px solid var(--accent-fg);
+    background: transparent;
+    transition: 300ms;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.header__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: 400ms;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-fg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.header__button:hover::before {
+    right: 0;
+}
+
+.header__button:active {
+    transform: scale(.95);
+}
+
+.header__button:active::before {
+    right: 0;
+}
+
+.header__button i {
+    margin-right: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__button span,
+.header__button i {
+    position: relative;
+    z-index: 2;
+}
+
+/* CONSULTATION */
+.consultation__container {
+    width: 44vw;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: var(--bg-1);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.consultation__title {
+    text-align: center;
+}
+
+.consultation__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.consultation__label>label {
+    font-weight: 500;
+    color: var(--fg);
+    cursor: pointer;
+}
+
+.consultation__label>input {
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: var(--bg);
+    transition: 300ms;
+}
+
+.consultation__label>input:focus {
+    border-color: var(--accent-fg);
+}
+
+.consultation__button {
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: var(--accent-bg);
+    transition: 300ms;
+    border: 0;
+    color: var(--bg);
+}
+
+.consultation__button:hover {
+    transform: scale(1.01);
+}
