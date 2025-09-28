@@ -2,240 +2,656 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trichologist | Hair treatment at the Rubenhair clinic</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trichologist | Hair treatment at the Rubenhair clinic</title>
 </head>
 
 <body>
-    <div class="language"></div>
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <button class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
+        <span></span><span></span><span></span>
+      </button>
 
-    <nav class="navbar">
-        <div class="container navbar__container">
-            <div class="navbar__logo">
-                <img src="./assets/logo.png">
-            </div>
-            <div class="navbar__links">
-                <a class="navbar__link" href="#">Beginning</a>
-                <a class="navbar__link" href="#about">About</a>
-                <a class="navbar__link" href="#service">Services</a>
-                <a class="navbar__link" href="#reviews">Reviews</a>
-                <a class="navbar__link" href="/blogs">Blog</a>
-                <a class="navbar__link" href="#contacts">Contacts</a>
-            </div>
-            <div class="navbar__contact">
-                +123456789
-            </div>
+      <div class="navbar__logo">
+        <img src="./assets/logo/light.png">
+      </div>
+
+      <div class="navbar__links">
+        <a class="navbar__link" href="./index.html">Main</a>
+        <a class="navbar__link" href="./index.html#about">About</a>
+        <a class="navbar__link" href="./index.html#service">Services</a>
+        <a class="navbar__link" href="./index.html#reviews">Reviews</a>
+        <a class="navbar__link" href="./blogs">Blog</a>
+        <a class="navbar__link" href="./index.html#contacts">Contacts</a>
+      </div>
+      <div class="navbar__extras">
+        <div class="navbar__contact">+123456789</div>
+        <div class="navbar__language">
+          <select>
+            <option value="en">English</option>
+            <option value="lv">Latviešu</option>
+            <option value="ru">Русский</option>
+          </select>
         </div>
-    </nav>
+      </div>
+    </div>
+    <div class="navbar__overlay"></div>
+  </nav>
 
-    <header class="header">
-        <div class="header__container">
-            <h1 class="header__title">Quality hair and scalp treatment at Rubenhair Latvia clinic</h1>
-            <p class="header__text">Trichology is the science of the structure, functions and diseases of human hair.
-                Clinical trichology is the diagnosis and treatment of diseases and disorders of the hair and scalp.</p>
-            <button class="header__button">
-                <a href="#consultation">
-                    <i class="far fa-calendar-check"></i>
-                    <span>Get a consultation</span>
-                </a>
-            </button>
+
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">Quality hair and scalp treatment at Rubenhair Latvia clinic</h1>
+      <p class="header__text">Trichology is the science of the structure, functions and diseases of human hair.
+        Clinical trichology is the diagnosis and treatment of diseases and disorders of the hair and scalp.</p>
+      <button class="header__button">
+        <a href="./index.html#consultation">
+          <i class="far fa-calendar-check"></i>
+          <span>Get a consultation</span>
+        </a>
+      </button>
+    </div>
+  </header>
+
+  <section class="consultation section-py" id="consultation">
+    <div class="consultation__container">
+      <h2 class="consultation__title">Get a free online consultation!</h2>
+      <div class="consultation__label">
+        <label for="name">Name and surname</label>
+        <input type="text" id="name">
+      </div>
+      <div class="consultation__label">
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+      </div>
+      <div class="consultation__label">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone">
+      </div>
+      <button class="consultation__button">Get a consultation</button>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__container container">
+      <div class="about__left">
+        <h2 class="about__title">Hair Health and Treatment (Trihalog Services)</h2>
+        <p class="about__text">Get comprehensive, structured advice and treatment from one of the most trusted
+          hair health clinics in Europe.</p>
+        <div class="about__item">
+          <div class="about__icon">
+            <i class="fas fa-clinic-medical"></i>
+          </div>
+          <div class="about__content">
+            <h3 class="about__subtitle">Professional clinic</h3>
+            <p class="about__description">We will help you understand the cause of your hair loss problem or
+              scalp condition through a personal and in-depth consultation of approximately one hour
+              before recommending the most effective course of action.</p>
+          </div>
         </div>
-    </header>
-
-    <section class="consultation section-py" id="consultation">
-        <div class="consultation__container">
-            <h2 class="consultation__title">Get a free online consultation!</h2>
-            <div class="consultation__label">
-                <label for="name">Name and surname</label>
-                <input type="text" id="name">
-            </div>
-            <div class="consultation__label">
-                <label for="email">E-mail</label>
-                <input type="email" id="email">
-            </div>
-            <div class="consultation__label">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone">
-            </div>
-            <button class="consultation__button">Get a consultation</button>
+        <div class="about__item">
+          <div class="about__icon">
+            <i class="fas fa-medkit"></i>
+          </div>
+          <div class="about__content">
+            <h3 class="about__subtitle">Experienced trichologists</h3>
+            <p class="about__description">We do our best to make you feel comfortable during consultations
+              and procedures. In our 10-year history, we have investigated, diagnosed and treated all
+              types of hair loss and scalp conditions.</p>
+          </div>
         </div>
-    </section>
+        <a href="./index.html#consultation" class="about__button">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Get a consultation with a trichologists</span>
+        </a>
+      </div>
+      <div class="about__right">
+        <img src="./assets/index/about/1.png" alt="Фото о компании">
+      </div>
+    </div>
+  </section>
 
-    <section class="about" id="about">
-        <div class="about__container container">
-            <div class="about__left">
-                <h2 class="about__title">Hair Health and Treatment (Trihalog Services)</h2>
-                <p class="about__text">Get comprehensive, structured advice and treatment from one of the most trusted
-                    hair health clinics in Europe.</p>
-                <div class="about__item">
-                    <div class="about__icon">
-                        <i class="fas fa-clinic-medical"></i>
-                    </div>
-                    <div class="about__content">
-                        <h3 class="about__subtitle">Professional clinic</h3>
-                        <p class="about__description">We will help you understand the cause of your hair loss problem or
-                            scalp condition through a personal and in-depth consultation of approximately one hour
-                            before recommending the most effective course of action.</p>
-                    </div>
+  <section class="applyfor" id="applyfor">
+    <div class="container">
+      <h2 class="applyfor__title">Apply for a consultation!</h2>
+      <p class="applyfor__text">
+        Improve your quality of life and apply for a consultation with our trichologists,
+        who will provide comprehensive answers to your questions and determine the best course of treatment.
+      </p>
+      <div class="applyfor__label">
+        <i class="fas fa-phone"></i>
+        Tel / Whatsapp
+      </div>
+      <a href="tel:37126777776" class="applyfor__number">+371 267 777 76</a>
+    </div>
+  </section>
+
+
+  <section class="section-py takecare" id="takecare">
+    <div class="container takecare__container">
+      <div class="takecare__left">
+        <img src="./assets/index/takecare/1.png" class="takecare__img">
+      </div>
+      <div class="takecare__right">
+        <h2 class="takecare__title">Take care of your hair health!</h2>
+        <p class="takecare__text">Trichology is a branch of medicine that deals with the in-depth study,
+          diagnosis and treatment of
+          hair and scalp health problems. A trichologist is a doctor who specializes in the treatment of hair
+          loss, hair and scalp. trich</p>
+        <p class="takecare__text">Experienced dermatologists and trichologists of the Hair Transplant and Skin
+          Health Center Rubenhair
+          Latvia carry out high-quality and timely diagnosis and treatment of the cause of hair loss and skin
+          diseases.</p>
+        <p class="takecare__author">dr. Andrei M.</p>
+        <p class="takecare__label">Hair health doctor</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-py services" id="services">
+    <div class="container services__container">
+      <h2 class="services__title">Procedures and Services</h2>
+      <div class="services__grid">
+        <div class="services__card">
+          <div class="services__card-icon">
+            <img src="./assets/index/services/1.svg">
+          </div>
+          <h3 class="services__card-title">Prevention of hair loss</h3>
+          <p class="services__card-text">Qualitative diagnosis and treatment of the causes of hair loss and
+            skin diseases.</p>
+        </div>
+        <div class="services__card">
+          <div class="services__card-icon">
+            <img src="./assets/index/services/2.svg">
+          </div>
+          <h3 class="services__card-title">Hair treatment with PRP injections</h3>
+          <p class="services__card-text">PRP injections strengthen the hair roots, which helps hair growth.
+          </p>
+        </div>
+        <div class="services__card">
+          <div class="services__card-icon">
+            <img src="./assets/index/services/3.svg">
+          </div>
+          <h3 class="services__card-title">Hair transplant surgery</h3>
+          <p class="services__card-text">Provides natural hair thickness, as well as high-quality and
+            long-lasting results.</p>
+        </div>
+        <div class="services__card">
+          <div class="services__card-icon">
+            <img src="./assets/index/services/4.svg">
+          </div>
+          <h3 class="services__card-title">Minoxidil 5% for hair growth</h3>
+          <p class="services__card-text">Minoxidil 5% solution is a topical product that promotes hair growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-py treatments" id="treatments">
+    <div class="container treatments__grid">
+      <div class="treatments__content">
+        <p>Hair and scalp treatments</p>
+        <p>In the hair transplant clinic Rubenhair Latvia, all services offered are certified, safe and
+          recognized in the Republic of Latvia and the European Union.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/1.png');">
+        <p class="treatments__card-number">01.</p>
+        <h3 class="treatments__card-title">Hair transplantation with FUE</h3>
+        <p class="treatments__card-text">FUE (follicular unit extraction). The transplanted hair grows very well
+          and does not fall out. The results are permanent.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/2.png');">
+        <p class="treatments__card-number">02.</p>
+        <h3 class="treatments__card-title">Hair treatment with PRP injections</h3>
+        <p class="treatments__card-text">At the Rubenhair hair clinic, it is possible to receive PRP (Platelet
+          Rich Plasma) injections, which are a very effective means of promoting hair growth.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/3.png');">
+        <p class="treatments__card-number">03.</p>
+        <h3 class="treatments__card-title">Eyebrow transplant</h3>
+        <p class="treatments__card-text">At the Rubenhair hair clinic, eyebrow transplantation proceeds
+          similarly to the hair transplantation procedure. The only difference is that this time the grafts
+          are divided one hair follicle at a time, because the natural hairs in the eyebrows grow one at a
+          time.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/4.png');">
+        <p class="treatments__card-number">04.</p>
+        <h3 class="treatments__card-title">Transplantation of the beard and mustache area</h3>
+        <p class="treatments__card-text">Hair transplantation and skin health center Rubenhair Latvia performs
+          beard transplantation and mustache transplantation using the manual FUE method.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/3.png');">
+        <p class="treatments__card-number">05.</p>
+        <h3 class="treatments__card-title">Hair treatment with Minoxidil</h3>
+        <p class="treatments__card-text">Minoxidil 5% (Minoxidil) solution is an over-the-counter medication and
+          is a topical product that promotes hair growth.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/4.png');">
+        <p class="treatments__card-number">06.</p>
+        <h3 class="treatments__card-title">Hair and scalp examinations</h3>
+        <p class="treatments__card-text">The experienced doctors of the hair transplant and skin health center
+          Rubenhair Latvia perform high-quality and timely diagnosis and treatment of the cause of hair loss
+          and skin diseases.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/4.png');">
+        <p class="treatments__card-number">07.</p>
+        <h3 class="treatments__card-title">Hair treatment</h3>
+        <p class="treatments__card-text">Hair loss can have various reasons and it applies to both men and
+          women. Modern medicine has developed enough to deal with this problem.</p>
+      </div>
+      <div class="treatments__card" style="--card-img: url('../assets/index/treatments/2.png');">
+        <p class="treatments__card-number">08.</p>
+        <h3 class="treatments__card-title">Scalp treatment</h3>
+        <p class="treatments__card-text">Experienced doctors who carry out high-quality and timely diagnosis and
+          treatment of the cause of hair loss and skin diseases.</p>
+      </div>
+      <div class="treatments__contact">
+        <p class="treatments__contact-title">Phone/WhatsApp</p>
+        <p class="treatments__contact-phone">+371 267 777 76</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="goconsult" id="goconsult">
+    <div class="goconsult__container">
+      <p class="goconsult__text">
+        Take care of your hair health!
+      </p>
+      <p class="goconsult__text">
+        Apply for a consultation with the rubenhair clinic's trichologists!
+      </p>
+      <button class="goconsult__button">Get a consultation!</button>
+    </div>
+  </section>
+
+  <section class="reviews section-py">
+    <div class="container">
+      <div class="reviews__header">
+        <h2 class="reviews__title">Excellent</h2>
+        <div class="reviews__stars" aria-label="Rating 4.5 out of 5">
+          <svg class="star">
+            <use href="./index.html#star-full" />
+          </svg>
+          <svg class="star">
+            <use href="./index.html#star-full" />
+          </svg>
+          <svg class="star">
+            <use href="./index.html#star-full" />
+          </svg>
+          <svg class="star">
+            <use href="./index.html#star-full" />
+          </svg>
+          <svg class="star">
+            <use href="./index.html#star-half" />
+          </svg>
+        </div>
+        <div class="reviews__meta">Based on <strong>39 reviews</strong></div>
+      </div>
+
+      <div class="reviews__shell">
+        <button class="reviews__btn reviews__btn--prev" aria-label="Previous reviews">
+          <span class="arrow"></span>
+        </button>
+
+        <div class="reviews__viewport">
+          <ul class="reviews__track">
+            <!-- 1 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c1">Ц</div>
+                <div class="who">
+                  <div class="name">Caesar I</div>
+                  <div class="date">2023-12-31</div>
                 </div>
-                <div class="about__item">
-                    <div class="about__icon">
-                        <i class="fas fa-medkit"></i>
-                    </div>
-                    <div class="about__content">
-                        <h3 class="about__subtitle">Experienced trichologists</h3>
-                        <p class="about__description">We do our best to make you feel comfortable during consultations
-                            and procedures. In our 10-year history, we have investigated, diagnosed and treated all
-                            types of hair loss and scalp conditions.</p>
-                    </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">A very good doctor who transplanted my hair… strong result.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 2 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c2">M</div>
+                <div class="who">
+                  <div class="name">Mixaskm</div>
+                  <div class="date">2023-11-28</div>
                 </div>
-                <a href="#consultation" class="about__button">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Get a consultation with a trichologists</span>
-                </a>
-            </div>
-            <div class="about__right">
-                <img src="./assets/about-1.png" alt="Фото о компании">
-            </div>
-        </div>
-    </section>
-
-    <section class="applyfor" id="applyfor">
-        <div class="container">
-            <h2 class="applyfor__title">Apply for a consultation!</h2>
-            <p class="applyfor__text">
-                Improve your quality of life and apply for a consultation with our trichologists,
-                who will provide comprehensive answers to your questions and determine the best course of treatment.
-            </p>
-            <div class="applyfor__label">
-                <i class="fas fa-phone"></i>
-                Tel / Whatsapp
-            </div>
-            <a href="tel:37126777776" class="applyfor__number">+371 267 777 76</a>
-        </div>
-    </section>
-
-
-    <section class="section-py takecare" id="takecare">
-        <div class="container takecare__container">
-            <div class="takecare__left">
-                <img src="./assets/takecare-1.png" class="takecare__img">
-            </div>
-            <div class="takecare__right">
-                <h2 class="takecare__title">Take care of your hair health!</h2>
-                <p class="takecare__text">Trichology is a branch of medicine that deals with the in-depth study,
-                    diagnosis and treatment of
-                    hair and scalp health problems. A trichologist is a doctor who specializes in the treatment of hair
-                    loss, hair and scalp. trich</p>
-                <p class="takecare__text">Experienced dermatologists and trichologists of the Hair Transplant and Skin
-                    Health Center Rubenhair
-                    Latvia carry out high-quality and timely diagnosis and treatment of the cause of hair loss and skin
-                    diseases.</p>
-                <p class="takecare__author">dr. Andrei M.</p>
-                <p class="takecare__label">Hair health doctor</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-py services" id="services">
-        <div class="container services__container">
-            <h2 class="services__title">Procedures and Services</h2>
-            <div class="services__grid">
-                <div class="services__card">
-                    <div class="services__card-icon">
-                        <img src="./assets/services-1.svg">
-                    </div>
-                    <h3 class="services__card-title">Prevention of hair loss</h3>
-                    <p class="services__card-text">Qualitative diagnosis and treatment of the causes of hair loss and
-                        skin diseases.</p>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">★★★★★</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 3 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c3">D</div>
+                <div class="who">
+                  <div class="name">Dmitry Panov</div>
+                  <div class="date">2023-11-16</div>
                 </div>
-                <div class="services__card">
-                    <div class="services__card-icon">
-                        <img src="./assets/services-2.svg">
-                    </div>
-                    <h3 class="services__card-title">Hair treatment with PRP injections</h3>
-                    <p class="services__card-text">PRP injections strengthen the hair roots, which helps hair growth.
-                    </p>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">FUE at temples & crown. 14 months later — natural growth, no scarring.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 4 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c4">M</div>
+                <div class="who">
+                  <div class="name">Māris Valpēters</div>
+                  <div class="date">2023-11-16</div>
                 </div>
-                <div class="services__card">
-                    <div class="services__card-icon">
-                        <img src="./assets/services-3.svg">
-                    </div>
-                    <h3 class="services__card-title">Hair transplant surgery</h3>
-                    <p class="services__card-text">Provides natural hair thickness, as well as high-quality and
-                        long-lasting results.</p>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Painless after anesthesia. Professional staff. Would recommend.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 5 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c5">S</div>
+                <div class="who">
+                  <div class="name">Siim-S</div>
+                  <div class="date">2023-11-07</div>
                 </div>
-                <div class="services__card">
-                    <div class="services__card-icon">
-                        <img src="./assets/services-4.svg">
-                    </div>
-                    <h3 class="services__card-title">Minoxidil 5% for hair growth</h3>
-                    <p class="services__card-text">Minoxidil 5% solution is a topical product that promotes hair growth.
-                    </p>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Friendly service, responsive support. Long day, but smooth.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 6 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c6">T</div>
+                <div class="who">
+                  <div class="name">Tiit</div>
+                  <div class="date">2023-10-13</div>
                 </div>
-            </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Pleased with results. Clear prescription plan. Fair price.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 7 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c7">H</div>
+                <div class="who">
+                  <div class="name">Hossein A.</div>
+                  <div class="date">2023-06-19</div>
+                </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">PRP treatment: painless sampling, kind reception. Positive experience.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 8 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c8">C</div>
+                <div class="who">
+                  <div class="name">Cynthia L.</div>
+                  <div class="date">2023-06-21</div>
+                </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Honest consultation and clear next steps. Highly recommend.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 9 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c9">A</div>
+                <div class="who">
+                  <div class="name">Alex</div>
+                  <div class="date">2023-05-02</div>
+                </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Process well organized from consult to aftercare.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+            <!-- 10 -->
+            <li class="review">
+              <div class="review__top">
+                <div class="avatar c10">L</div>
+                <div class="who">
+                  <div class="name">Lina</div>
+                  <div class="date">2023-04-18</div>
+                </div>
+              </div>
+              <div class="review__stars">
+                <svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg><svg class="star sm">
+                  <use href="./index.html#star-full" />
+                </svg>
+              </div>
+              <p class="review__text">Kind team, clear expectations, result meets promises.</p>
+              <a class="review__more" href="./index.html#" tabindex="-1">Read more</a>
+            </li>
+          </ul>
         </div>
-    </section>
 
+        <button class="reviews__btn reviews__btn--next" aria-label="Next reviews">
+          <span class="arrow"></span>
+        </button>
+      </div>
+    </div>
 
-    <section class="section-py treatments" id="treatments">
-        <div class="container treatments__grid">
-            <div class="treatments__content">
-                <p>Hair and scalp treatments</p>
-                <p>In the hair transplant clinic Rubenhair Latvia, all services offered are certified, safe and recognized in the Republic of Latvia and the European Union.</p>
+    <!-- symbols -->
+    <svg width="0" height="0" style="position:absolute">
+      <symbol id="star-full" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2.5l2.9 6 6.6.5-5 4.3 1.6 6.3L12 16.7 5.9 19.6l1.6-6.3-5-4.3 6.6-.5 2.9-6z" />
+      </symbol>
+      <symbol id="star-half" viewBox="0 0 24 24">
+        <defs>
+          <linearGradient id="half">
+            <stop offset="50%" stop-color="currentColor" />
+            <stop offset="50%" stop-color="transparent" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#half)" d="M12 2.5l2.9 6 6.6.5-5 4.3 1.6 6.3L12 16.7V2.5z" />
+        <path fill="currentColor" opacity=".25"
+          d="M12 2.5l-2.9 6-6.6.5 5 4.3-1.6 6.3L12 16.7l6.1 2.9-1.6-6.3 5-4.3-6.6-.5L12 2.5z" />
+      </symbol>
+    </svg>
+  </section>
+
+  <section class="contact section-py" id="contacts">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__left">
+          <h2 class="contact__title">Contact us!</h2>
+
+          <div class="contact__blocks">
+            <div class="contact__block">
+              <h3 class="contact__label">Phone</h3>
+              <a class="contact__link" href="tel:+37126777776">+371 26777776</a>
             </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">01.</p>
-                <h3 class="treatments__card-title">Hair transplantation with FUE</h3>
-                <p class="treatments__card-text">FUE (follicular unit extraction). The transplanted hair grows very well and does not fall out. The results are permanent.</p>
+
+            <div class="contact__block">
+              <h3 class="contact__label">Address</h3>
+              <p>Rubenhair Latvia</p>
+              <p>Republic square 3 – 12</p>
+              <p>Riga LV-1010, Latvia</p>
             </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">02.</p>
-                <h3 class="treatments__card-title">Hair treatment with PRP injections</h3>
-                <p class="treatments__card-text">At the Rubenhair hair clinic, it is possible to receive PRP (Platelet Rich Plasma) injections, which are a very effective means of promoting hair growth.</p>
+
+            <div class="contact__block">
+              <h3 class="contact__label">E-mail</h3>
+              <a class="contact__link" href="mailto:info@rubenhair.eu">info@rubenhair.eu</a>
             </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">03.</p>
-                <h3 class="treatments__card-title">Eyebrow transplant</h3>
-                <p class="treatments__card-text">At the Rubenhair hair clinic, eyebrow transplantation proceeds similarly to the hair transplantation procedure. The only difference is that this time the grafts are divided one hair follicle at a time, because the natural hairs in the eyebrows grow one at a time.</p>
-            </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">04.</p>
-                <h3 class="treatments__card-title">Transplantation of the beard and mustache area</h3>
-                <p class="treatments__card-text">Hair transplantation and skin health center Rubenhair Latvia performs beard transplantation and mustache transplantation using the manual FUE method.</p>
-            </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">05.</p>
-                <h3 class="treatments__card-title">Hair treatment with Minoxidil</h3>
-                <p class="treatments__card-text">Minoxidil 5% (Minoxidil) solution is an over-the-counter medication and is a topical product that promotes hair growth.</p>
-            </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">06.</p>
-                <h3 class="treatments__card-title">Hair and scalp examinations</h3>
-                <p class="treatments__card-text">The experienced doctors of the hair transplant and skin health center Rubenhair Latvia perform high-quality and timely diagnosis and treatment of the cause of hair loss and skin diseases.</p>
-            </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">07.</p>
-                <h3 class="treatments__card-title">Hair treatment</h3>
-                <p class="treatments__card-text">Hair loss can have various reasons and it applies to both men and women. Modern medicine has developed enough to deal with this problem.</p>
-            </div>
-            <div class="treatments__card">
-                <p class="treatments__card-number">08.</p>
-                <h3 class="treatments__card-title">Scalp treatment</h3>
-                <p class="treatments__card-text">Experienced doctors who carry out high-quality and timely diagnosis and treatment of the cause of hair loss and skin diseases.</p>
-            </div>
-            <div class="treatments__contact">
-                <p class="treatments__contact-title">Phone/WhatsApp</p>
-                <p class="treatments__contact-phone">+371 267 777 76</p>
-            </div>
+          </div>
         </div>
-    </section>
 
+        <div class="contact__right">
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps?q=Rubenhair%20Latvia%2C%20Republikas%20laukums%203%2C%20Riga&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__logo">
+          <img src="./assets/logo/light.png">
+        </div>
+        <div class="footer__socials">
+          <a href="./index.html" style="--color: #1877f3;">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="./index.html" style="--color: #1da1f2;">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="./index.html" style="--color: #e4405f;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="./index.html" style="--color: #ea4335;">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__label">
+          © 2025 Trihologa Pakalpojumi klīnikā Rubenhair | Visas tiesības aizsargātas.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

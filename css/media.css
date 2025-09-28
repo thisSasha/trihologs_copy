@@ -1,0 +1,238 @@
+@media (max-width: 1200px) {
+    .header__title {
+        max-width: 76%;
+    }
+
+    .header__text {
+        max-width: 64%;
+    }
+
+    .takecare__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .takecare__title {
+        font-size: 28px;
+    }
+
+    .treatments__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .treatments__content,
+    .treatments__contact {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 72px;
+    }
+
+    .navbar__container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navbar__logo img {
+        height: 28px;
+    }
+
+    .navbar__burger {
+        display: inline-flex;
+    }
+
+    .navbar__menu {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        width: 92vw;
+        max-width: 420px;
+        background: var(--bg-1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        border-radius: 16px;
+        transform: translateY(-20px) scale(.98);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s ease, transform .25s ease;
+        z-index: 130;
+    }
+
+    .navbar__links {
+        flex-direction: column;
+        gap: 12px;
+        color: var(--fg);
+    }
+
+    .navbar__link {
+        font-size: 18px;
+    }
+
+    .navbar__link::after {
+        background-color: var(--accent-bg);
+    }
+
+    .navbar__extras {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .navbar__contact {
+        color: var(--fg);
+        border-color: var(--accent-bg);
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__language select {
+        color: var(--fg);
+        width: 100%;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    body.nav-open .navbar__menu {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    body.nav-open .navbar__overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    body.nav-open .navbar__burger span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+        width: 22px;
+    }
+
+    body.nav-open .navbar__burger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    body.nav-open .navbar__burger span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+        width: 22px;
+    }
+
+    .header {
+        height: 72vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .header__title {
+        font-size: 34px;
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
+    .header__text {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    /* --- section-py --- */
+    .section-py {
+        padding: 72px 0;
+        /* из 860px */
+    }
+
+    @media (max-width: 900px) {
+        .section-py {
+            padding: 64px 0;
+        }
+    }
+
+    /* --- about__container --- */
+    .about__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- takecare__container --- */
+    .takecare__container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .takecare__right {
+        margin: 0 auto;
+    }
+
+    .takecare__author {
+        margin-top: 20px;
+    }
+
+    .treatments__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .treatments__content,
+    .treatments__contact {
+        grid-column: span 1;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .consultation__container {
+        padding: 16px;
+        border-radius: 16px;
+        max-width: 94%;
+        width: 94%;
+    }
+
+    .services__grid {
+        flex-direction: column;
+    }
+
+    .goconsult {
+        padding: 72px 0;
+        background: var(--accent-bg);
+    }
+
+    .goconsult__text {
+        font-size: 16px;
+    }
+
+    .goconsult__container {
+        width: 80vw;
+    }
+
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact__map {
+        aspect-ratio: 16 / 12;
+    }
+
+    .review {
+        width: clamp(240px, 60vw, 320px);
+    }
+
+    .reviews__viewport {
+        padding: 0 52px;
+    }
+
+    .footer__top .container {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
