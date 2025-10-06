@@ -16,11 +16,11 @@
       <button class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
         <span></span><span></span><span></span>
       </button>
-
+  
       <div class="navbar__logo">
-        <img src="./assets/logo/light.png">
+        <img src="./assets/logo/dark.png" alt="">
       </div>
-
+  
       <div class="navbar__links">
         <a class="navbar__link" href="./index.html">Main</a>
         <a class="navbar__link" href="./index.html#about">About</a>
@@ -29,17 +29,26 @@
         <a class="navbar__link" href="./blogs">Blog</a>
         <a class="navbar__link" href="./index.html#contacts">Contacts</a>
       </div>
+  
       <div class="navbar__extras">
         <div class="navbar__contact">+123456789</div>
         <div class="navbar__language">
-          <select>
-            <option value="en">English</option>
-            <option value="lv">Latviešu</option>
-            <option value="ru">Русский</option>
-          </select>
+          <div class="select">
+            <img src="./assets/langs/en.png" alt="">
+          </div>
+          <div class="options">
+            <div class="option" data-value="en"><img src="./assets/langs/en.png" alt=""></div>
+            <div class="option" data-value="lv"><img src="./assets/langs/lv.png" alt=""></div>
+            <div class="option" data-value="ru"><img src="./assets/langs/ru.png" alt=""></div>
+          </div>
         </div>
       </div>
     </div>
+  
+    <div id="navbar-menu" class="navbar__menu" aria-hidden="true">
+      <button class="navbar__close" aria-label="Close menu"></button>
+    </div>
+  
     <div class="navbar__overlay"></div>
   </nav>
 

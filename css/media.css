@@ -34,6 +34,7 @@
     .navbar__container {
         padding-left: 16px;
         padding-right: 16px;
+        flex-direction: row-reverse;
     }
 
     .navbar__logo img {
@@ -44,56 +45,161 @@
         display: inline-flex;
     }
 
+    .navbar__burger span {
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background: var(--bg);
+        transition: transform .25s ease, opacity .25s ease, width .25s ease;
+    }
+
+    .navbar__burger span:nth-child(1) {
+        transform: translateY(-6px);
+    }
+
+    .navbar__burger span:nth-child(2) {
+        transform: translateY(0);
+    }
+
+    .navbar__burger span:nth-child(3) {
+        transform: translateY(6px);
+    }
+
     .navbar__menu {
         position: fixed;
-        top: 12px;
-        right: 12px;
-        width: 92vw;
-        max-width: 420px;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
         background: var(--bg-1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
-        padding: 20px;
+        padding: 20px 20px 28px;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         gap: 20px;
-        border-radius: 16px;
-        transform: translateY(-20px) scale(.98);
+        border-radius: 0;
+        transform: translateY(-8px);
         opacity: 0;
         pointer-events: none;
         transition: opacity .25s ease, transform .25s ease;
         z-index: 130;
     }
 
+    .navbar__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .navbar__close::before,
+    .navbar__close::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 6px;
+        width: 20px;
+        height: 2px;
+        background: var(--fg);
+    }
+
+    .navbar__close::before {
+        transform: rotate(45deg);
+    }
+
+    .navbar__close::after {
+        transform: rotate(-45deg);
+    }
+
     .navbar__links {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 0;
+        width: 100%;
+        margin-top: 52px;
         color: var(--fg);
     }
 
     .navbar__link {
-        font-size: 18px;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        color: var(--fg);
+        display: block;
     }
 
-    .navbar__link::after {
-        background-color: var(--accent-bg);
+    .navbar__link:hover::after {
+        display: none;
+    }
+
+    .navbar__link+.navbar__link::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--fg);
+        margin: 20px 0;
+        opacity: .3;
     }
 
     .navbar__extras {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
     }
 
     .navbar__contact {
-        color: var(--fg);
-        border-color: var(--accent-bg);
-        width: 100%;
+        padding: 10px 12px;
         text-align: center;
+        font-size: 24px;
+        width: 100%;
+        color: var(--fg);
+        height: fit-content;
     }
 
-    .navbar__language select {
-        color: var(--fg);
+    .navbar__language {
         width: 100%;
+        height: 53px;
+    }
+
+    .navbar__language .select {
+        display: inline-flex;
+        height: 53px;
+        width: 100%;
+        border-radius: 100vw;
+    }
+
+    .navbar__language .options {
+        position: absolute;
+        bottom: 76px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        background: var(--bg-1);
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
+        opacity: 0;
+        width: 100%;
+    }
+
+    .navbar__language img {
+        height: 32px;
+    }
+
+    .navbar__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .3);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s ease;
+        z-index: 120;
     }
 
     body.nav-open {
@@ -101,7 +207,7 @@
     }
 
     body.nav-open .navbar__menu {
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
@@ -112,7 +218,7 @@
     }
 
     body.nav-open .navbar__burger span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
+        transform: translateY(0) rotate(45deg);
         width: 22px;
     }
 
@@ -121,7 +227,7 @@
     }
 
     body.nav-open .navbar__burger span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(0) rotate(-45deg);
         width: 22px;
     }
 

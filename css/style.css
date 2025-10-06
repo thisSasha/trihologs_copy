@@ -106,26 +106,69 @@ body {
     font-size: 15px;
 }
 
+
 .navbar__language {
     position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    height: 39px;
 }
 
-.navbar__language select {
+.navbar__language .select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 8px 16px;
-    border-radius: 12px;
+    border-radius: 20px;
     border: 2px solid var(--accent-fg);
     background: transparent;
     font-size: 15px;
+    height: 39px;
     cursor: pointer;
     outline: none;
     transition: 300ms;
 }
 
-.navbar__language option {
+.navbar__language .options {
+    position: absolute;
+    margin-top: 4px;
+    left: 0;
+    transition: 300ms;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    border: 2px solid var(--accent-fg);
     background: var(--bg);
+    z-index: 5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.navbar__language .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--fg);
     font-size: 15px;
+    transition: 300ms;
     padding: 8px 12px;
+    height: 39px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.navbar__language .option:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar__language img {
+    box-shadow: 0 0 6px #222;
+    height: 100%;
+    margin: 0 1px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .navbar__menu {
